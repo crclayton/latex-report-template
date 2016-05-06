@@ -1,0 +1,102 @@
+\documentclass[oneside,listof=totoc]{scrbook}
+\setuptoc{toc}{totoc}
+\pagestyle{plain}   % no running headers
+\usepackage{array, titlesec, booktabs, graphicx}
+
+% for bibliography 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} 
+\usepackage{biblatex}
+
+% removes "Chapter N" title
+\titleformat{\chapter}{\huge\bf}{\thechapter.}{20pt}{\huge\bf}
+\titlespacing*{\chapter} {0pt}{10pt}{20pt}
+
+% uses latex font for headers instead of KOMA-Script's sans-serif
+\addtokomafont{disposition}{\rmfamily}
+
+
+% renames "Contents" to "Table of Contents"
+\renewcommand\contentsname{Table of Contents}
+
+
+
+\begin{document}
+
+% title page w/o page numbers
+
+\title{Formal APA Report}
+\subtitle{Using \LaTeX and GitHub}
+\author{Charles Clayton}
+\date{\today}
+\maketitle
+
+% auto-generated front matter w/ roman page numbering
+
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+% main section
+
+\mainmatter
+\chapter{Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Present Day}
+Lorem ipsum dolor sit amet, consectetur \cite{dirac} adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+\begin{table}[ht]
+  \centering
+  \caption{Table without vertical lines}
+  \begin{tabular}{>{\centering\bfseries}m{1in} >{\centering}m{1in} >{\centering}m{1in} >{\centering\arraybackslash}m{1in}}
+    \toprule
+    Letter & \textbf{Dates} & \textbf{Number} & \textbf{Note} \\ 
+    \midrule
+	$x$ & 5-Mar-2016 & 1 & do \\
+	$y$ & 5-Mar-2016 & 2 & re \\
+	$z$ & 5-Mar-2016 & 3 & mi \\
+	\bottomrule
+  \end{tabular}
+\end{table}
+
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+\section{Future}
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\chapter{Discussion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Overview} 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et \cite{einstein} magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{Images/schematic.png}
+\caption{Schematic image}
+\end{figure}
+
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Detailed Design} 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+
+\chapter{Conclusion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ deserunt mollit anim id est laborum.
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+
+\end{document}
