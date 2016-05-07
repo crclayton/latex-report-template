@@ -1,0 +1,77 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Dirac%
+}{%
+Dirac%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+dirac}
+\APACinsertmetastar {%
+dirac}%
+\begin{APACrefauthors}%
+Dirac, P\BPBI A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1981}.
+\newblock
+\APACrefbtitle {The Principles of Quantum Mechanics} {The principles of quantum
+  mechanics}.
+\newblock
+\APACaddressPublisher{}{Clarendon Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Einstein%
+}{%
+Einstein%
+}{%
+{\protect \APACyear {1905}}%
+}]{%
+einstein}
+\APACinsertmetastar {%
+einstein}%
+\begin{APACrefauthors}%
+Einstein, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1905}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+  [{On} the electrodynamics of moving bodies]} {{Zur Elektrodynamik bewegter
+  K{\"o}rper}. ({German}) [{On} the electrodynamics of moving bodies]}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annalen der Physik}{322}{10}{891--921}.
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1002/andp.19053221004}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Knuth%
+}{%
+Knuth%
+}{%
+{\protect \APACyear {1973}}%
+}]{%
+knuth-fa}
+\APACinsertmetastar {%
+knuth-fa}%
+\begin{APACrefauthors}%
+Knuth, D\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1973}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Fundamental Algorithms} {Fundamental algorithms}.{\BBCQ}
+\newblock
+\BIn{} (\BCHAP~1.2).
+\newblock
+\APACaddressPublisher{}{Addison-Wesley}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
