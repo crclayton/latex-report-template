@@ -1,14 +1,13 @@
 \documentclass[oneside,listof=totoc]{scrbook}
 \setuptoc{toc}{totoc}
 \pagestyle{plain}   % no running headers
-\usepackage{array, booktabs, graphicx, apacite}
+\usepackage{array, booktabs, graphicx, apacite, setspace}
 
 % uses latex font for headers instead of KOMA-Script's sans-serif
 \addtokomafont{disposition}{\rmfamily}
 
 % renames "Contents" to "Table of Contents"
 \renewcommand\contentsname{Table of Contents}
-
 
 \begin{document}
 
@@ -22,12 +21,16 @@
 
 % auto-generated front matter w/ roman page numbering
 
+\singlespacing
+
 \frontmatter
 \tableofcontents
 \listoffigures
 \listoftables
 
 % main section
+
+\onehalfspacing
 
 \mainmatter
 \chapter{Introduction}
@@ -82,7 +85,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur \cite{einstein}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Deserunt mollit anim id est laborum.
 
 
-\bibliography{references}
+% bibliography
+\doublespacing
+\clearpage
+\bibliography{references}%b
 \bibliographystyle{apacite}
 
 
