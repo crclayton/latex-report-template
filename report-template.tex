@@ -17,14 +17,19 @@
 % glossary and definitions
 \makenoidxglossaries
 
-\newglossaryentry{Lorem}{name={Lorem},description={hold back, hold fast, take hold of, seize, catch }}
+\newglossaryentry{Lorem}{
+	name={Lorem},
+	description={hold back, hold fast, take hold of, seize, catch }
+}
 
 % renames "Contents" to "Table of Contents"
 \renewcommand\contentsname{Table of Contents}
 
 \begin{document}
 
-% ---- FRONT MATTER ---- %
+% ------------------------------ %
+% -------- FRONT MATTER -------- %
+% ------------------------------ %
 
 % title page w/o page numbers
 
@@ -48,7 +53,9 @@
 
 \printnoidxglossaries	\pagebreak
 
-% ---- MAIN MATTER ---- %
+% ----------------------------- %
+% -------- MAIN MATTER -------- %
+% ----------------------------- %
 
 \pagenumbering{arabic}
 \onehalfspacing
@@ -65,7 +72,12 @@
 \begin{table}[ht]
   \centering
   \caption{Table without vertical lines}
-  \begin{tabular}{>{\centering\bfseries}m{1in} >{\centering}m{1in} >{\centering}m{1in} >{\centering\arraybackslash}m{1in}}
+  \begin{tabular}{
+  		>{\centering\bfseries}m{1in} 
+  		>{\centering}m{1in} 
+  		>{\centering}m{1in} 
+  		>{\centering\arraybackslash}m{1in}
+  		}
     \toprule
     Letter & \textbf{Dates} & \textbf{Number} & \textbf{Note} \\ 
     \midrule
@@ -104,8 +116,9 @@
 \section{Conclusion}
 \lipsum[2]
 
-
-% ---- BACK MATTER ---- %
+% ----------------------------- %
+% -------- BACK MATTER -------- %
+% ----------------------------- %
 
 % bibliography
 \doublespacing
