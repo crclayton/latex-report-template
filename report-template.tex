@@ -17,7 +17,7 @@
 % glossary and definitions
 \makenoidxglossaries
 
-\newglossaryentry{lorem}{name={Lorem},description={hold back, hold fast, take hold of, seize, catch }}
+\newglossaryentry{Lorem}{name={Lorem},description={hold back, hold fast, take hold of, seize, catch }}
 
 % renames "Contents" to "Table of Contents"
 \renewcommand\contentsname{Table of Contents}
@@ -40,11 +40,11 @@
 
 % auto-generated front matter w/ roman page numbering
 
-\singlespacing		\pagebreak
-\tableofcontents	\pagebreak
+\singlespacing			\pagebreak
+\tableofcontents		\pagebreak
 
 \listoffigures		
-\listoftables		\pagebreak
+\listoftables			\pagebreak
 
 \printnoidxglossaries	\pagebreak
 
@@ -54,13 +54,13 @@
 \onehalfspacing
 \section{Introduction}
 
-\gls{lorem} ipsum. \lipsum[0]
+\gls{Lorem} ipsum \cite{einstein}.
 
 \subsection{History}
-
 \lipsum[2]
 
 \subsection{Present Day}
+\lipsum[2]
 
 \begin{table}[ht]
   \centering
@@ -76,30 +76,34 @@
   \end{tabular}
 \end{table}
 
+\subsection{Future}
 \lipsum[2]
 
-\subsection{Future}
+\section{Discussion} 
+\lipsum[2]
 
-\lipsum[3]
+\begin{equation}
+\int_{0}^{2\pi} \rho^2 d\rho
+\end{equation}
 
-\section{Design} 
+\subsection{Design} 
+\lipsum[2]
 
-\subsection{Overview} 
-
-\lipsum[7]
+\subsubsection{Details}
+\lipsum[2]
+\cite{knuth-fa}
 
 \subsubsection{Schematic}
-
+\lipsum[2]
 \begin{figure}[ht!]
 \centering
-\includegraphics[height=40mm, width=100mm]{Images/schematic.png}
+\includegraphics[width=100mm]{Images/schematic.png}
 \caption{Schematic image}
 \end{figure}
 
-\subsubsection{Detail}
-
+\section{Conclusion}
 \lipsum[2]
-    
+
 
 % ---- BACK MATTER ---- %
 
@@ -111,17 +115,12 @@
 \pagebreak
 
 
-%\addtocontents{toc}{\setcounter{tocdepth}{-1}}
-%\begin{appendices}
-%\section{Solved Problems}
-%\end{appendices}
-
 \appendix
 \section*{Appendix}
 \addcontentsline{toc}{section}{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
-\subsection{Solved Problems}
 
+\subsection{Solved Problems}
 \lipsum[2]
 
 
