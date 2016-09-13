@@ -1,8 +1,40 @@
 \documentclass{article}
-\usepackage{array, booktabs, graphicx, apacite, setspace, tocbibind, lipsum}
+\usepackage{array, booktabs, graphicx, apacite, setspace}
 \usepackage[titletoc,toc,title]{appendix}
 \usepackage[toc,section=section]{glossaries}
-\usepackage[parfill]{parskip}
+\usepackage{tocloft}
+\usepackage{titlesec}
+
+
+% set section indentation
+\setcounter{secnumdepth}{4}
+
+
+% add space between paragraphs
+\setlength{\parskip}{\baselineskip}
+
+
+% format \paragraph{example} as a subsubsubsection
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% automatically convert "" to ``''
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+
+% define list of equations
+\newcommand{\listequationsname}{\Large{List of Equations}}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{
+   \addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}
+}
+\setlength{\cftmyequationsnumwidth}{2.3em}
+\setlength{\cftmyequationsindent}{1.5em}
+
 
 % format appendix numbering
 \renewcommand\appendix{\par
@@ -15,45 +47,53 @@
   \renewcommand\thetable{\Alph{section}\arabic{table}}
 }
 
-% glossary and definitions
-\makenoidxglossaries
-\renewcommand{\glstextformat}[1]{\textit{#1}} % make all items defined in the glossary italic
 
-\newglossaryentry{Lorem}{
-	name={Lorem},
-	description={hold back, hold fast, take hold of, seize, catch }
+% -------- GLOSSARY ENTRIES -------- %
+\makenoidxglossaries
+
+\newglossaryentry{word}{
+	name={Word},
+	description={Definition of the word}
 }
+
 
 % renames "Contents" to "Table of Contents"
 \renewcommand\contentsname{Table of Contents}
 
 \begin{document}
 
-% ------------------------------ %
-% -------- FRONT MATTER -------- %
-% ------------------------------ %
+% -------------------------------------- %
+% ------------ FRONT MATTER ------------ %
+% -------------------------------------- %
 
-% title page w/o page numbers
+% -------- TITLE PAGE -------- %
 
-\title{\huge Formal APA Report Template \\ \Large \medskip Subtitle}
+\title{\huge Report Title \\ \Large \medskip Subtitle}
 \author{Charles Clayton}
 \date{\today}
 \maketitle
-
+`
 \thispagestyle{empty}
 
 \pagenumbering{roman}
 \setcounter{page}{0}
 
-% auto-generated front matter w/ roman page numbering
+
+% -------- TABLE OF CONTENTS/LISTS -------- %
 
 \singlespacing			\pagebreak
 \tableofcontents		\pagebreak
 
 \listoffigures		
-\listoftables			\pagebreak
+\listoftables
+\listofmyequations
+\pagebreak
+
+
+% -------- GLOSSARY -------- %
 
 \printnoidxglossaries	\pagebreak
+
 
 % ----------------------------- %
 % -------- MAIN MATTER -------- %
@@ -61,82 +101,90 @@
 
 \pagenumbering{arabic}
 \onehalfspacing
+
 \section{Introduction}
 
-\gls{Lorem} ipsum \cite{einstein}.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
-\subsection{History}
-\lipsum[2]
+Duis aute irure dolor in \gls{word} reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur \cite{einstein}.
 
-\subsection{Present Day}
-\lipsum[2]
+
+\subsection{Background}
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 \begin{table}[ht]
   \centering
   \caption{Table without vertical lines}
   \begin{tabular}{
-  		>{\centering\bfseries}m{1in} 
+  		>{\centering\bfseries}m{0.5in} 
   		>{\centering}m{1in} 
-  		>{\centering}m{1in} 
-  		>{\centering\arraybackslash}m{1in}
+  		>{\centering}m{0.5in} 
+  		>{\centering\arraybackslash}m{0.5in}
   		}
     \toprule
-    Letter & \textbf{Dates} & \textbf{Number} & \textbf{Note} \\ 
+    Letter & \textbf{Date} & \textbf{Number} & \textbf{Note} \\ 
     \midrule
 	$x$ & 5-Mar-2016 & 1 & do \\
-	$y$ & 5-Mar-2016 & 2 & re \\
-	$z$ & 5-Mar-2016 & 3 & mi \\
+	$y$ & 6-Feb-2016 & 2 & re \\
+	$z$ & 7-Jun-2016 & 3 & mi \\
 	\bottomrule
   \end{tabular}
 \end{table}
 
-\subsection{Future}
-\lipsum[2]
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \section{Discussion} 
-\lipsum[2]
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 \begin{equation}
 \int_{0}^{2\pi} \rho^2 d\rho
 \end{equation}
+\myequations{Example equation}
 
 \subsection{Design} 
-\lipsum[2]
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 \subsubsection{Details}
-\lipsum[2]
-\cite{knuth-fa}
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \cite{knuth-fa}.
 
 \subsubsection{Schematic}
-\lipsum[2]
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=100mm]{Images/schematic.png}
+\includegraphics[width=80mm]{Images/schematic.png}
 \caption{Schematic image}
 \end{figure}
 
 \section{Conclusion}
-\lipsum[2]
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 % ----------------------------- %
 % -------- BACK MATTER -------- %
 % ----------------------------- %
 
-% bibliography
-\doublespacing
+% -------- BIBLIOGRAPHY -------- %
 \clearpage
+\doublespacing
 \bibliography{references}
 \bibliographystyle{apacite} 
 \pagebreak
 
-
+% -------- APPENDIX -------- %
 \appendix
+\onehalfspacing
 \section*{Appendix}
 \addcontentsline{toc}{section}{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-\subsection{Solved Problems}
-\lipsum[2]
+\subsection{Calculations}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 
 \end{document}
